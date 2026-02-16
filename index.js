@@ -3,7 +3,11 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  console.log(numbers.length)
+
+  let count = numbers.length
+
+  return count
 }
 
 /**
@@ -11,7 +15,14 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let sum = 0
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]
+  }
+
+  console.log(sum)
+  return sum
 }
 
 /**
@@ -19,7 +30,18 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let sum = 0
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]
+  }
+
+  let mean = sum / numbers.length
+
+  console.log(mean)
+
+  return mean
+
 }
 
 /**
@@ -27,7 +49,17 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  let min = numbers[0]
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < min){
+      min = numbers[i]
+    }
+  }
+  console.log(min)
+
+  return min
+
 }
 
 /**
@@ -35,7 +67,17 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+    let max = numbers[0]
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max){
+      max = numbers[i]
+    }
+  }
+  console.log(max)
+
+  return max
+
 }
 
 /**
@@ -43,7 +85,25 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  let min = numbers[0]
+  let max = numbers[0]
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < min){
+      min = numbers[i]
+    }
+
+    if (numbers[i] > max) {
+      max = numbers[i]
+    }
+  }
+
+  let range
+
+  range = max - min
+
+  console.log(range)
+
+  return range
 }
 
 /**
@@ -51,7 +111,18 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let evens = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    if(numbers[i] % 2 === 0){
+      evens.push(numbers[i]);
+    }
+  }
+
+  console.log(evens)
+
+  return evens
+
 }
 
 /**
@@ -59,7 +130,13 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  let odds = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 ===1) {
+      odds.push(numbers[i]);
+    }
+  }
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
